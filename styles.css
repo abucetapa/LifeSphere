@@ -1,0 +1,238 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #f4f4f4;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1e1e1e;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff6347;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav ul li {
+  margin-left: 15px;
+}
+
+.nav ul li a:hover {
+  color: #ff6347;
+}
+
+/* Banner */
+.banner {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #ff6347, #ff4500);
+  color: white;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.banner p {
+  font-size: 1rem;
+  margin: 15px 0;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #1e1e1e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #333;
+}
+
+/* Canales que Sigues */
+.channels-followed, .preview-live, .channels-recommended {
+  padding: 20px;
+}
+
+.channels-followed h2, .preview-live h2, .channels-recommended h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* Grid para Canales Seguidos */
+.channels-grid-small {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.channel-card-small {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.profile-pic-small {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.channel-info-small h3 {
+  font-size: 0.9rem;
+  color: #f4f4f4;
+}
+
+.channel-info-small .category {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Previsualización de Directos */
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.preview-card {
+  position: relative;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.preview-thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.live-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.live-info h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.live-info .category {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Canales Recomendados */
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.recommendation-card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.recommendation-card img {
+  width: 100%;
+  height: auto;
+}
+
+.recommendation-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.recommendation-info h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.recommendation-info .category {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px 20px;
+  background-color: #1e1e1e;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #ff6347;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .channels-grid-small {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .preview-grid, .recommendations-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
